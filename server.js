@@ -37,9 +37,8 @@ client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
     let messages = [`Assistindo ${client.users.size} pessoas`,
-                    `Estou em ${client.guilds.size} servidores`]
-
-    setInterval(() => {
+                    `Você na minha cama!🔥`, `Toda molhadinha 🔥`]
+   setInterval(() => {
         let randomMessages = Math.floor(Math.random() * (messages.length - 1) + 1)
         client.user.setActivity(messages[randomMessages])
     }, 10000)
