@@ -15,15 +15,15 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#00ff00")
     .setThumbnail(sicon)
     .setAuthor(message.guild.name)
-    .addField("Name", message.guild.name, inline)
+    .addField("🔰 Nome", message.guild.name, inline)
     .addField("💻 ID", message.guild.id, inline)
-    .addField(, message.guild.owner, inline)
-    .addField("Region", message.guild.region, inline)
+    .addField("👑 Dono", message.guild.owner, inline)
+    .addField("🌎 Região", message.guild.region, inline)
     .addField("Verification Level", verlvl[message.guild.verificationLevel],inline)
-    .addField("Members", `<:user:424958082691629057> ${message.guild.memberCount}`, inline)
-    .addField("Roles", message.guild.roles.size, inline)
-    .addField("Channels", message.guild.channels.size, inline)
-    .addField("You Joined", message.member.joinedAt)
+    .addField("👥 Membros", `<:user:424958082691629057> ${message.guild.memberCount}`, inline)
+    .addField(":medal: Cargos", message.guild.roles.size, inline)
+    .addField(":speech_balloon: Channels", message.guild.channels.size, inline)
+    .addField("📆 Entrei aqui em", message.member.joinedAt)
     .setFooter(`Created ${message.guild.createdAt}`);
 
     message.channel.send(serverembed);
