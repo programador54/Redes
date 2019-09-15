@@ -21,8 +21,8 @@ module.exports.run = async (client, message, args) =>{
                 .setColor('RANDOM')
                 .setThumbnail(client.user.avatarURL)
                 .setTimestamp()
-                .setTitle("Comandos Básicos")
-                .setDescription("Mostra todos comandos básicos do bot.\n\n``/ping`` Mostra a latência do BOT e da API.\n``/serverinfo`` Mostra informações do Servidor.\n``/help`` Mostra a central de ajuda.\n")
+                .setTitle("Comandos de Moderação")
+                .setDescription("Mostra todos comandos de moderação do bot.\n\n``d!say`` Faz o bot falar no chat.\n``/serverinfo`` Mostra informações do Servidor.\n``/help`` Mostra a central de ajuda.\n")
                 .setFooter(`${client.user.username}`, client.user.avatarURL);
                 msg.edit(a);
             })
