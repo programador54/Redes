@@ -22,8 +22,8 @@ module.exports.run = async (client, message, args) =>{
                 .setThumbnail(client.user.avatarURL)
                 .setTimestamp()
                 .setTitle("Comandos de Moderação")
-                .setDescription("Mostra todos comandos de moderação do bot.\n\n``d!``(mensagem) » Faça eu falar alguma coisa!.\n``d!clear``(QuantasMensagens) » Limpa o chat do canal de texto atual..\n``/help`` Mostra a central de ajuda.\n")
-                .setFooter(`${client.user.username}`, client.user.avatarURL);
+                .setDescription("Meus comandos de moderação:.\n\n``d!say`` (mensagem) » Faça eu falar alguma coisa!.\n``d!clear`` (QuantasMensagens) » Limpa o chat do canal de texto atual..\n``d!ajuda`` Mostra a central de ajuda.\n")
+               .setFooter(`${client.user.username}`, client.user.avatarURL);
                 msg.edit(a);
             })
     })
