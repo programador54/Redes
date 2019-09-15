@@ -18,7 +18,7 @@ client.prefix = config.prefix;
 client.on("message", async message => {
     if(message.author.bot) return;
     if(message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)){
-        return message.reply("Olá meu prefixo é `-`")}
+        return message.reply("Olá meu prefixo é `d!`")}
     if(!message.content.startsWith(config.prefix)) return;
 
 let args = message.content.split(" ").slice(1);
