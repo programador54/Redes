@@ -36,7 +36,7 @@ command = command.slice(config.prefix.length);
 client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
-    let statuses = [`Assistindo ${client.users.size} pessoas`,
+    let statuses = [`Para ${client.users.size} pessoas`,
                     `Você na minha cama!🔥`, `Toda molhadinha 🔥`]
    
     setInterval(function() {
@@ -44,7 +44,8 @@ client.on("ready", () => {
         
         client.user.setPresence({
             game: {
-                name: status
+                name: status,
+              type: "STREAMING"
             },
             status: 'online'
         });
