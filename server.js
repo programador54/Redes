@@ -36,17 +36,25 @@ command = command.slice(config.prefix.length);
 client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
-    let messages = [`Assistindo ${client.users.size} pessoas`,
+    let statuses = [`Assistindo ${client.users.size} pessoas`,
                     `Você na minha cama!🔥`, `Toda molhadinha 🔥`]
-   setInterval(() => {
-        let randomMessages = Math.floor(Math.random() * (messages.length - 1) + 1)
-        client.user.setActivity(messages[randomMessages])
+   
+    setInterval(function() {
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+        
+        client.user.setPresence({
+            game: {
+                name: status
+            },
+            status: 'online'
+        });
     }, 10000)
+
 
     //0 = Jogando
     //1 = Transmitindo
     //2 = Ouvindo
     //3 = Assistindo
-})
+  })
 
 client.login(process.env.TOKEN)
