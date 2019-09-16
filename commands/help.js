@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) =>{
                 msg.edit(a);
             })
     })
-message.channel.send({embed: embed}).then(msg=>{
+message.channel.msg({embed: embed}).then(msg=>{
             msg.react('😈');
         
   const basicosfilter = (reaction, user) => reaction.emoji.name === '😈' && user.id === message.author.id;
