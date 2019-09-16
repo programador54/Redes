@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) =>{
   .setColor("#15f153")
   .setTitle("<a:fogo:616722909477732373> Meus comandos são:")
   .setThumbnail(bicon)
-  .setDescription("🔨» **Básicos** Mostra os comandos básicos do bot.\n\n👮» **Moderação** Mostra os comandos de moderação do bot.")
+  .setDescription("\n🔨» **Básicos** Mostra os comandos básicos do bot.\n👮» **Moderação** Mostra os comandos de moderação do bot.")
   
   message.channel.send({embed: embed}).then(msg=>{
             msg.react('👮');
