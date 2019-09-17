@@ -16,7 +16,8 @@
     "superagent": "^5.1.0",
     "moment": "^2.24.0",
     "emoji": "^0.3.2",
-    "emo-ji": "^1.0.4"
+    "emo-ji": "^1.0.4",
+    "snekfetch": "^4.0.4"
   },
   "engines": {
     "node": "8.x"
