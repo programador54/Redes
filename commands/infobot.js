@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const bot = new Discord.Client();
 
 module.exports.run = async (client, message, args) => {
 const eEmbed = new Discord.RichEmbed()
@@ -8,8 +9,8 @@ const eEmbed = new Discord.RichEmbed()
 	.addField('👑 Meu criador', "! ♔ corιɴɢα' ๖̷̶̷ ̷F.G.C 🔥#0272", true)
 	.addField('<:node:623606982699647006> Versão do Bot', 'V 1.0.1', true)
   .addField('Total Users', `${client.users.size}`, true)
-            .addField('Total Channels:', `${client.channels.size}`, true)
-            .addField('Total Servers', Math.ceil(client.guilds.size), true)
+  .addField('Total Channels:', `${client.channels.size}`, true)
+  .addField('Total Servers', Math.ceil(client.guilds.size), true)
 	.setTimestamp()
 	.setFooter('Estou em desenvolvimento.', 'https://i.imgur.com/wSTFkRM.png');
 
