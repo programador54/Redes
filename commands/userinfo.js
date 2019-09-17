@@ -21,10 +21,10 @@ exports.run = (bot, message, args) => {
                 }
             }
             whoIs.addField('Nome de Usuário', user.username, true)
-            whoIs.addField('ID', user.id, true);
+            whoIs.addField('🆔 ID', user.id, true);
             whoIs.setThumbnail(user.avatarURL);
             whoIs.addField('Status', user.presence.status, true);
-            whoIs.addField('Conta criada', moment(user.createdAt).format('LL'), true);
+            whoIs.addField('📆 Conta criada', moment(user.createdAt).format('LL'), true);
             whoIs.setTimestamp();
 
             if (message.channel.type === 'dm') {
