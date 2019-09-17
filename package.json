@@ -12,7 +12,9 @@
   "dependencies": {
     "express": "^4.16.4",
     "discord.js": "^11.5.1",
-    "module.js": "^2.2.4"
+    "module.js": "^2.2.4",
+    "superagent": "^5.1.0",
+    "moment": "^2.24.0"
   },
   "engines": {
     "node": "8.x"
