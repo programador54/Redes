@@ -1,5 +1,7 @@
 dependencies:
   discord.js: 11.5.1
+  emo-ji: 1.0.4
+  emoji: 0.3.2
   express: 4.16.4
   module.js: 2.2.4
   moment: 2.24.0
@@ -143,6 +145,23 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+  /emo-ji/1.0.4:
+    dependencies:
+      emojilib: 1.1.0
+      object-assign: 4.1.1
+    dev: false
+    resolution:
+      integrity: sha1-nANPiUjulWkKiL6g0DZvP2WEpAY=
+  /emoji/0.3.2:
+    dev: false
+    engines:
+      node: '>=0.8.0'
+    resolution:
+      integrity: sha1-Shcjy7zPkYBCV9pjz68AtTN/5gQ=
+  /emojilib/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-sXyGZ8j24yRIhxrlfQWqOwJWO4s=
   /encodeurl/1.0.2:
     dev: false
     engines:
@@ -365,6 +384,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
+  /object-assign/4.1.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
   /on-finished/2.3.0:
     dependencies:
       ee-first: 1.1.1
@@ -592,6 +617,8 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   discord.js: ^11.5.1
+  emo-ji: ^1.0.4
+  emoji: ^0.3.2
   express: ^4.16.4
   module.js: ^2.2.4
   moment: ^2.24.0

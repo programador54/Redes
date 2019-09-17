@@ -14,7 +14,9 @@
     "discord.js": "^11.5.1",
     "module.js": "^2.2.4",
     "superagent": "^5.1.0",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "emoji": "^0.3.2",
+    "emo-ji": "^1.0.4"
   },
   "engines": {
     "node": "8.x"

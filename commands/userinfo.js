@@ -20,17 +20,17 @@ exports.run = (bot, message, args) => {
                     whoIs.setDescription('Jogando **' + user.presence.game.name + '**.');
                 }
             }
-            whoIs.addField('Nome de Usuário', user.username, true)
+            whoIs.addField('👥 Nome de Usuário', user.username, true)
             whoIs.addField('🆔 ID', user.id, true);
             whoIs.setThumbnail(user.avatarURL);
-            whoIs.addField('Status', user.presence.status, true);
+            whoIs.addField('💻 Status', user.presence.status, true);
             whoIs.addField('📆 Conta criada', moment(user.createdAt).format('LL'), true);
             whoIs.setTimestamp();
 
             if (message.channel.type === 'dm') {
                 message.channel.sendEmbed(whoIs);
             } else if (message.channel.permissionsFor(message.guild.member(bot.user)).hasPermission('EMBED_LINKS')) {
-            	whoIs.addField('Entrou no server', moment(message.guild.member(user).joinedAt).format('LL'), true);
+            	whoIs.addField('📆 Entrou no servidor', moment(message.guild.member(user).joinedAt).format('LL'), true);
             	if (message.member.highestRole.color !== undefined) {
                 whoIs.setColor(message.member.highestRole.color)
             }
