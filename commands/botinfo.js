@@ -9,7 +9,7 @@ const eEmbed = new Discord.RichEmbed()
 	.addField('👑 Meu criador', "! ♔ corιɴɢα' ๖̷̶̷ ̷F.G.C 🔥#0272", true)
 	.addField('<:node:623606982699647006> Versão do Bot', 'V 1.0.1', true)
   .addField('👥 Usuários', `${client.users.size}`, true)
-  .addField('Total Channels:', `${client.channels.size}`, true)
+  .addField(':speech_balloon: Canais:', `${client.channels.size}`, true)
   .addField('🌎 Servidores', Math.ceil(client.guilds.size), true)
 	.setTimestamp()
 	.setFooter('Estou em desenvolvimento.', 'https://i.imgur.com/wSTFkRM.png');
