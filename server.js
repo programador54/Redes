@@ -33,6 +33,21 @@ command = command.slice(config.prefix.length);
   }
 })
 
+/// para ser colocado na sua main - bot.js - ou - index.js - ou qualquer outra coisa
+
+client.on("guildMemberAdd", member => {
+    let canal = client.channels.get("id do canal que é de boas vindas")
+    let boasvindas = new Discord.RichEmbed()
+    .setTitle("Título")
+    .addField(`${member}, seja muito bem vindo ao nosso servidor!`, `Leia às regras para não ser punido!`)
+    .addField("Outra mensagem", `outra mensagem2`)
+    .setColor("RANDOM")
+    .setTimestamp()
+    .setFooter(member.author.avatarURL) 
+canal.send(boasvindas)
+})
+ 
+
 client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
