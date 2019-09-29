@@ -14,6 +14,7 @@ const config = require('./config.json');
 
 const client = new Discord.Client()
 client.prefix = config.prefix;
+const newUsers = [];
 
 client.on("message", async message => {
     if(message.author.bot) return;
@@ -33,19 +34,19 @@ command = command.slice(config.prefix.length);
   }
 })
 
-/// para ser colocado na sua main - bot.js - ou - index.js - ou qualquer outra coisa
-
- client.on("guildMemberAdd", (member) => {
+client.on("guildMemberAdd", (member) => {
   const guild = member.guild;
   if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
-  member[guild.id].set(member.id, member.user);
+  newUsers[guild.id].set(member.id, member.user);
 
   if (newUsers[guild.id].size > 10) {
     const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.find(channel => channel.name === "general").send("Welcome our new users!\n" + userlist);
+    guild.channels.find(channel => channel.name === "609854570851598432").send("Welcome our new users!\n" + userlist);
     newUsers[guild.id].clear();
   }
 });
+
+/// para ser colocado na sua main - bot.js - ou - index.js - ou qualquer outra coisa
 
 client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
