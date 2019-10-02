@@ -16,7 +16,7 @@ module.exports = async (client, member) => {
     'content': '',
     'embed': {
       'color': 15407128,
-      'description': `🐧 Olá ${member.user.username}, seja bem vindo(a) ao Linux ON!`,
+      'description': `🐧 Bem vindo, (a${member.user.username}, aqui no Linux ON!, você aprende programação e interagi com a comunidade.`,
       'author': {
         'name': `${member.user.username}#${member.user.discriminator}`,
         'icon_url': member.user.displayAvatarURL
