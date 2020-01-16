@@ -7,17 +7,17 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
     "discord.js": "^11.5.1",
-    "module.js": "^2.2.4",
-    "superagent": "^5.2.1",
     "moment": "^2.24.0",
-    "emoji": "^0.3.2",
-    "emo-ji": "^1.0.4",
-    "snekfetch": "^4.0.4",
-    "jimp": "^0.9.3"
+    "fs": "^0.0.2",
+    "jimp": "^0.9.3",
+    "node-fetch": "^2.6.0",
+    "klasa": "^0.4.0",
+    "cowsay": "^1.4.0"
   },
   "engines": {
     "node": "8.x"
