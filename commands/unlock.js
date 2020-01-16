@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
   message.channel.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: null
         }).then(() => {
-            message.reply("<a:Seta:640505419302830090> **_O canal foi desbloqueado com sucesso!_ Use  ``$!lock``  para travar!**");
+            message.reply("<a:Seta:640505419302830090> **_O canal foi desbloqueado com sucesso!_ Use  ``x-lock``  para travar!**");
             clearTimeout(client.lockit[message.channel.id]);
             delete client.lockit[message.channel.id];
         }).catch(error => {

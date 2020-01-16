@@ -75,7 +75,7 @@ client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
     let statuses = [`Segurança!`,
-                    `proteção!`, `Em desenvolvimento!`, `Linux ON 🐧`]
+                    `proteção!`, `Meu prefix é: X-`, `Linux ON 🐧`]
    
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
