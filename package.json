@@ -10,14 +10,15 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "discord.js": "^11.5.1",
     "module.js": "^2.2.4",
     "superagent": "^5.1.0",
     "moment": "^2.24.0",
     "emoji": "^0.3.2",
     "emo-ji": "^1.0.4",
-    "snekfetch": "^4.0.4"
+    "snekfetch": "^4.0.4",
+    "jimp": "^0.9.3"
   },
   "engines": {
     "node": "8.x"
