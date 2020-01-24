@@ -59,12 +59,12 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.sendMessage("<a:attention:640834595440558110> Não poste links, " + message.author)
   }
-  if (message.content.includes("http://")) {
+  if (message.content.includes("httpj://")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
     message.channel.sendMessage("<a:attention:640834595440558110> Não poste links, " + message.author)
   }
-  if (message.content.includes("www.")) {
+  if (message.content.includes("wwwk.")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
     message.channel.sendMessage("<a:attention:640834595440558110> Não poste links, " + message.author)
