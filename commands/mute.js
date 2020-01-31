@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     try{
       muterole = await message.guild.createRole({
         name: "muted",
-        color: "#000000",
+        color: "#FF0000",
         permissions:[]
       })
       message.guild.channels.forEach(async (channel, id) => {
@@ -43,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
           .addField("⏰ Mutado por:", `${ms(ms(mutetime))}`)
           .addField(":clipboard: Motivo da punição:", `${reason}`)
           .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)
-          .setColor("#9370DB").setTimestamp()
+          .setColor("#FF0000").setTimestamp()
 
           message.channel.send(pEmbed);
 
