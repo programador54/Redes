@@ -19,7 +19,7 @@ client.prefix = config.prefix;
 client.on("message", async message => {
     if(message.author.bot) return;
     if(message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)){
-return message.reply("Olá meu prefixo é `x-`")}
+return message.reply("Olá meu prefixo é `l.`")}
     if(!message.content.startsWith(config.prefix)) return;
 let args = message.content.split(" ").slice(1);
 let command = message.content.split(" ")[0];
@@ -64,10 +64,10 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.sendMessage("<a:attention:640834595440558110> Não poste links, " + message.author)
   }
-  if (message.content.includes("wwwk.")) {
+  if (message.content.includes("@everyone")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
-    message.channel.sendMessage("<a:attention:640834595440558110> Não poste links, " + message.author)
+    message.channel.sendMessage("<a:attention:640834595440558110> Não é permitido fazer isso sem autorização, " + message.author)
   }
 });
 
