@@ -57,7 +57,7 @@ client.on("message", (message) => {
   if (message.content.includes("https://")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
-    message.channel.sendMessage("<a:attention:640834595440558110> Não poste links, " + message.author)
+    message.channel.sendMessage(`m`<a:attention:640834595440558110> )
   }
   if (message.content.includes("httpj://")) {
     console.log("deleted " + message.content + " from " + message.author)
