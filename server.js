@@ -57,17 +57,17 @@ client.on("message", (message) => {
   if (message.content.includes("https://")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
-    message.channel.sendMessage(`m`<a:attention:640834595440558110> )
+    message.channel.sendMessage(`<a:attention:640834595440558110> | <@${message.author.id}> Não é permitido divulgação de outros servidores na nossa comunidade!`).then(msg => msg.delete(25000))
   }
   if (message.content.includes("httpj://")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
     message.channel.sendMessage("<a:attention:640834595440558110> Não poste links, " + message.author)
   }
-  if (message.content.includes("@everyone")) {
+  if (message.content.includes("@everyone", "@here")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
-    message.channel.sendMessage("<a:attention:640834595440558110> Não é permitido fazer isso sem autorização, " + message.author)
+    message.channel.sendMessage(`<a:attention:640834595440558110> | <@${message.author.id}> Não é permitido fazer isso sem autorização do mestre!`).then(msg => msg.delete(25000))
   }
 });
 
