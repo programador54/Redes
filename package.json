@@ -17,7 +17,9 @@
     "jimp": "^0.9.3",
     "node-fetch": "^2.6.0",
     "klasa": "^0.4.0",
-    "cowsay": "^1.4.0"
+    "cowsay": "^1.4.0",
+    "quick-lru": "^5.0.0",
+    "quick.db": "^6.3.2"
   },
   "engines": {
     "node": "8.x"
