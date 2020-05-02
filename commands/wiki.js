@@ -10,15 +10,11 @@ module.exports.run = async (bot, message, args) => {
   .setAuthor(`➕ | Novo wiki, feito por: ${message.author.tag}`)
   .setDescription(`${botmessage}`) 
   .setThumbnail(message.author.avatarURL) 
-  .setColor("#9370DB") 
-  .setFooter(`(✅) Gostou | (❌) Não gostou`)
-  message.guild.channels.get('705542186032300032').send(emb).then(async function (message) {
-		await message.react("✅")
-		await message.react("❌")
-  }) 
-                        
-}
-
+  .setColor("#9370DB")
+  .setTimestamp() 
+  .setFooter(`${message.guild.name}`, message.guild.iconURL)
+  message.guild.channels.get('705751193598558220').send(emb)
+} 
 module.exports.help = {
   name: "say"
 }
