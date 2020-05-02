@@ -12,7 +12,8 @@ module.exports.run = async (bot, message, args) => {
   .setThumbnail(message.author.avatarURL) 
   .setColor("#9370DB") 
   .setFooter(`(🔼) Gostou | (🔽) Não gostou`)
-  message.guild.channels.get('705748113587175436').send(emb).then(async function (message) {
+  message.channel.send("✅ | **Sua wiki foi enviada com sucesso**!").then(msg => msg.delete(15000))
+  message.guild.channels.get('705751193598558220').send(emb).then(async function (message) {
 		await message.react("🔼")
 		await message.react("🔽")
   }) 
