@@ -11,10 +11,10 @@ module.exports.run = async (bot, message, args) => {
   .setDescription(`${botmessage}`) 
   .setThumbnail(message.author.avatarURL) 
   .setColor("#9370DB") 
-  .setFooter(`(✅) Gostou | (❌) Não gostou`)
-  message.guild.channels.get('705542186032300032').send(emb).then(async function (message) {
-		await message.react("✅")
-		await message.react("❌")
+  .setFooter(`(🔼) Gostou | (🔽) Não gostou`)
+  message.guild.channels.get('705748113587175436').send(emb).then(async function (message) {
+		await message.react("🔼")
+		await message.react("🔽")
   }) 
                         
 }

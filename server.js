@@ -53,27 +53,8 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
-client.on('message', msg => {
-    if (msg.channel.id === '705749018126450708') {
-        if (msg.content.includes("https://")) {
-    console.log("deleted " + msg.content + " from " + msg.author)
-    msg.delete(1);
-    msg.channel.sendMessage(`<a:pingu:694649719150084177> | <@${msg.author.id}> Não é permitido fazer isso sem autorização do mestre!`).then(msg => msg.delete(25000))
-        }
-}
-  else if (msg.channel.id === '705747267088547860') {
-  if (msg.content.includes("@everyone")) {
-    console.log("deleted " + msg.content + " from " + msg.author)
-    msg.delete(1);
-    msg.channel.sendMessage(`<a:pingu:694649719150084177> | <@${msg.author.id}> Não é permitido fazer isso sem autorização do mestre!`).then(msg => msg.delete(25000))
-  }
-
-} 
-    
-});
-
 client.on("message", (message) => {
-  if (message.content.includes("")) {
+  if (message.content.includes("Lk")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
     message.channel.sendMessage(`<a:pingu:694649719150084177> | <@${message.author.id}> Não é permitido divulgação de outros servidores na nossa comunidade!`).then(msg => msg.delete(25000))
