@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 module.exports = {
     run: (client, message, args) => {
 
-        if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Você não pode usar esse comando.")
+      
         message.delete().catch()
        
         let dUser = message.guild.members.get("555450363789180958")
@@ -25,8 +25,9 @@ module.exports = {
         .setColor("#FF9900")
         .setTitle("🔔 | Novo pedido!") 
         .setThumbnail(message.author.avatarURL) 
-        .addField(`ID do Bot: ${titulo}`, `Descrição: **${anuncio}**`)
-        .setFooter(`Anuncio feito por ${message.author.tag}`)
+        .addField('💻 ID do Bot:', `\`\`${titulo}\`\``) 
+        .addField('📋 Descrição:', `**${anuncio}**`)
+        .setFooter(`Enviado por: ${message.author.tag}`, message.author.avatarURL) 
         .setTimestamp();
 
         dUser.send(anuncioembed)
