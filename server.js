@@ -54,7 +54,7 @@ fs.readdir("./events/", (err, files) => {
 });
 
 client.on("message", (message) => {
-  if (message.content.includes("Lk")) {
+  if (message.content.includes("emoji")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
     message.channel.sendMessage(`<a:pingu:694649719150084177> | <@${message.author.id}> Não é permitido divulgação de outros servidores na nossa comunidade!`).then(msg => msg.delete(25000))
