@@ -31,7 +31,7 @@ module.exports = {
         .setFooter(`Enviado por: ${message.author.tag}`, message.author.avatarURL) 
         .setTimestamp();
         
-        user2.send(anuncioembed) 
+        
         dUser.send(anuncioembed)
       message.channel.send('✅ | **Bot enviado para ser adicionado, aguarde a análise do seu bot para saber se ele é seguro**!').then(msg => msg.delete(1500))
     }
