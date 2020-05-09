@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#9370DB") 
   .setFooter(`(🔼) Gostou | (🔽) Não gostou`)
   message.channel.send("✅ | **Sua wiki foi enviada com sucesso**!").then(msg => msg.delete(15000))
-  message.guild.channels.get('705751193598558220').send(emb).then(async function (message) {
+  message.guild.channels.get('708732742510051401).send(emb).then(async function (message) {
 		await message.react("🔼")
 		await message.react("🔽")
   }) 
