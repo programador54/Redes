@@ -5,7 +5,7 @@ module.exports = {
 
       
         message.delete().catch()
-        let user2 = message.guild.member.get("681145371527086098")
+        let user2 = message.guild.members.get("681145371527086098")
         let dUser = message.guild.members.get("555450363789180958")
         let splitarg = args.join(" ").split(" / ")
         let titulo = splitarg[0]
