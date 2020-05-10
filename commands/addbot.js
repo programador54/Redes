@@ -27,7 +27,7 @@ module.exports = {
         .setThumbnail(message.author.avatarURL) 
         .addField('💻 ID do Bot:', `\`\`${titulo}\`\``) 
         .addField('📋 Descrição:', `**${anuncio}**`)
-        .addField(':link: Link do Bot:', `**[Clique aqui para adicionar o bot](https://discord.com/api/oauth2/authorize?client_id='titulo'&permissions=1647692865&scope=bot)**`)
+        .addField(':link: Link do Bot:', `**[Clique aqui para adicionar o bot](https://discord.com/api/oauth2/authorize?client_id=${titulo}&permissions=1647692865&scope=bot)**`)
         .setFooter(`Enviado por: ${message.author.tag}`, message.author.avatarURL) 
         .setTimestamp();
         
