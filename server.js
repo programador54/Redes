@@ -59,11 +59,14 @@ client.on("message", (message) => {
     message.delete(1);
     message.channel.sendMessage(`<a:pingu:694649719150084177> | <@${message.author.id}> Não é permitido divulgação de outros servidores na nossa comunidade!`).then(msg => msg.delete(25000))
   }
-  if (message.content.includes("@here")) {
+  if (message.content.includes("//discord.gg/")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
     message.channel.sendMessage(`<a:pingu:694649719150084177> | <@${message.author.id}> Não é permitido fazer isso sem autorização do mestre!`).then(msg => msg.delete(25000))
   }
+  if (message.content.includes('@here')) {
+    message.delete(1);
+  } 
   if (message.content.includes("@everyone")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete(1);
