@@ -12,12 +12,12 @@ module.exports = {
         let anuncio = splitarg[1]
 
         if(!titulo){
-
+       message.channel.send("\> **Use o formato**:\n```l-addbot <ID do bot> / <descrição>```\n\> OBS: *as `<` e `>` não use na sua mensagem, elas aqui estão sendo usadas como exemplo e decoração.*").then(m => m.delete(15000))
           return
         }
 
         if(!anuncio){
-            message.channel.send("\> **Use o formato**:\n```l-addbot <ID do bot> / <descrição>```\n\> OBS: *as `<` e `>` não use na sua mensagem, elas aqui estão sendo usadas como exemplo e decoração.*")
+            message.channel.send("\> **Use o formato**:\n```l-addbot <ID do bot> / <descrição>```\n\> OBS: *as `<` e `>` não use na sua mensagem, elas aqui estão sendo usadas como exemplo e decoração.*").then(m => m.delete(15000)) 
             return
         }
 
