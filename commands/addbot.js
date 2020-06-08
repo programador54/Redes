@@ -12,12 +12,12 @@ module.exports = {
         let anuncio = splitarg[1]
 
         if(!titulo){
-            message.reply("** <a:setinha:630093687036313641> Use o formato:\n ``l.addbot <ID do bot> / <descrição>``**")
+            message.reply("** Use o formato:\n ``l-addbot <ID do bot> / <descrição>``**")
             return
         }
 
         if(!anuncio){
-            message.reply("** <a:setinha:630093687036313641> Use o formato:\n ``l.addbot <ID do bot> / <descrição>**")
+            message.reply("**Use o formato:\n ``l-addbot <ID do bot> / <descrição>**")
             return
         }
 
