@@ -12,14 +12,14 @@
   "dependencies": {
     "express": "^4.17.1",
     "discord.js": "^11.5.1",
-    "moment": "^2.24.0",
+    "moment": "^2.26.0",
     "fs": "^0.0.2",
     "jimp": "^0.9.3",
     "node-fetch": "^2.6.0",
     "klasa": "^0.4.0",
     "cowsay": "^1.4.0",
     "quick-lru": "^5.0.0",
-    "quick.db": "^6.3.2"
+    "quick.db": "^7.1.1"
   },
   "engines": {
     "node": "8.x"
