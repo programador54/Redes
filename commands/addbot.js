@@ -34,8 +34,9 @@ module.exports = {
         
         dUser.send(anuncioembed)
      
-      const embed5 = new Discord.RichEmbed() 
-      .setDescription('<a:Vereficado:630163444733313048> | **Bot enviado para ser adicionado, aguarde a análise do seu bot para saber se ele é seguro**!').then(msg => msg.delete(1500))
+      let embed5 = new Discord.RichEmbed() 
+      .setDescription('<a:Vereficado:630163444733313048> | **Bot enviado para ser adicionado, aguarde a análise do seu bot para saber se ele é seguro**!')
+      message.channel.send(embed5).then(msg => msg.delete(3500))
    
       }
 }
