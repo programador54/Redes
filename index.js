@@ -22,7 +22,7 @@ client.on("message", async message => {
 return message.channel.send(
       "Olá " +
         `<@${message.author.id}>` +
-        ", meu prefixo é `d-`. \n Precisa de ajuda use `d-ajuda`."
+        ", meu prefixo é `l-`"
     );
   } 
 if(!message.content.startsWith(config.prefix)) return;
@@ -59,7 +59,7 @@ fs.readdir("./events/", (err, files) => {
 client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
-    let statuses = [`Minha prefix é d-ajuda!`, `Linux ON 🐧`, `Segurança e Amor!`];
+    let statuses = [`Minha prefix é l-ajuda!`, `Linux ON 🐧`, `Segurança e Conhecimento!`];
    
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
