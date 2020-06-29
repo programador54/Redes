@@ -38,7 +38,16 @@ command = command.slice(config.prefix.length);
   }
 })
 
+client.on('message', (message) => { //whenever a message is sent
 
+  if (message.content.includes('Linux'||'linux')) { //if it contains an invite link
+
+    message.react("727088200211759155") //delete the message
+
+      
+  }
+
+})
 
 
 fs.readdir("./events/", (err, files) => {
