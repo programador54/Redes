@@ -14,7 +14,7 @@ if(!botmessage) return message.channel.send(":x: | Você não informou nenhum te
   .setColor("#9370DB") 
   .setFooter(`(🔼) Gostou | (🔽) Não gostou`)
   message.channel.send("✅ | **Sua wiki foi enviada com sucesso**!").then(msg => msg.delete(15000))
-  message.guild.channels.get('713393242913243146').send(emb).then(async function (message) {
+  message.guild.channels.get('739605550223982657').send(emb).then(async function (message) {
 		await message.react("🔼")
 		await message.react("🔽")
   }) 
