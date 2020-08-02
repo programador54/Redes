@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
   //Hi
 
   let botmessage = args.join(" ");
+if(!botmessage) return message.channel.send(":x: | Você não informou nenhum texto para ser enviado!").then(m => m.delete(15000))
   message.delete().catch();
   let emb = new Discord.RichEmbed()
   .setAuthor(`➕ | Novo wiki, feito por: ${message.author.tag}`)
