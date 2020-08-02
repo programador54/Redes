@@ -9,7 +9,7 @@ if(!botmessage) return message.channel.send(":x: | Você não informou nenhum te
   message.delete().catch();
   let emb = new Discord.RichEmbed()
   .setAuthor(`➕ | Novo wiki, feito por: ${message.author.tag}`)
-  .setDescription(`${botmessage}`) 
+  .setDescription(`\`\`\`${botmessage}\`\`\``) 
   .setThumbnail(message.author.avatarURL) 
   .setColor("#9370DB") 
   .setFooter(`(🔼) Gostou | (🔽) Não gostou`)
