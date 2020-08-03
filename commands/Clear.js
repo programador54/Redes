@@ -9,5 +9,5 @@ let embed = new Discord.RichEmbed()
 .setTimestamp() 
 .setFooter(`${message.author.tag}`, message.author.avatarURL) 
 
-message.channel.send(embed).then(msg => msg.delete(18000)) 
+message.channel.send(embed).then(msg => msg.delete(21000)) 
 } 
