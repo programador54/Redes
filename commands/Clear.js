@@ -7,7 +7,7 @@ let embed = new Discord.RichEmbed()
 .setDescription("```$nomention $deletecommand\n$clear[$message]\n$argsCheck[>1;❌ Você não colocou a quantidade de mensagens a ser deletada!]\n$color[#FF0000] \n$description[✅ <@$authorID> Apagou $message mensagens!] \n$onlyAdmin[❌ Você não tem permissão suficiente para utilizar este comando! ]```")
 .setColor("#995BBD") 
 .setTimestamp() 
-.setFooter(`$message.author.tag`, message.author.avatarURL) 
+.setFooter(`${message.author.tag}`, message.author.avatarURL) 
 
 message.channel.send(embed).then(msg => msg.delete(18000)) 
 } 
