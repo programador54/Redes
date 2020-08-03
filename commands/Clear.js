@@ -3,7 +3,7 @@ const Discord = require("discord.js")
 module.exports.run = async (bot, message, args) => {
 
 let embed = new Discord.RichEmbed()
-.setTitle(":dbd: | Código:") 
+.setTitle(`:dbd: | Código:`) 
 .setDescription("```$nomention $deletecommand\n$clear[$message]\n$argsCheck[>1;❌ Você não colocou a quantidade de mensagens a ser deletada!]\n$color[#FF0000] \n$description[✅ <@$authorID> Apagou $message mensagens!] \n$onlyAdmin[❌ Você não tem permissão suficiente para utilizar este comando! ]```")
 .setColor("#995BBD") 
 .setTimestamp() 
