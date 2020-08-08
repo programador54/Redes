@@ -52,7 +52,7 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
         const reaction = collected.first();
 
         if (reaction.emoji.id === '727088200211759155') {
-            message.channel.send('<a:okok:740291543058874409> | <@${message.author.id}> Uau, Reação inesperada!.').then(m => m.delete(17000));
+            message.channel.send(`<a:okok:740291543058874409> | <@${message.author.id}> Uau, Reação inesperada!`).then(m => m.delete(17000));
         }
     })
   }
