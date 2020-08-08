@@ -39,12 +39,12 @@ command = command.slice(config.prefix.length);
 })
 
 client.on('message', (message) => { //whenever a message is sent
-
+  if(message.author.bot) return;
   if (message.content.includes('Linux'||'linux')) { //if it contains an invite link
 
     message.react("727088200211759155") //delete the message
 const filter = (reaction, user) => {
-    return ['727088200211759155'].includes(reaction.emoji.id) && user.id !== message.author.id;
+    return ['727088200211759155'].includes(reaction.emoji.id) && user.id === message.author.id;
 };
 
 message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
