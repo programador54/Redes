@@ -44,27 +44,18 @@ client.on('message', (message) => { //whenever a message is sent
 
     message.react("727088200211759155") //delete the message
 const filter = (reaction, user) => {
-    return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+    return ['727088200211759155'].includes(reaction.emoji.id) && user.id !== message.author.id;
 };
 
 message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
     .then(collected => {
         const reaction = collected.first();
 
-        if (reaction.emoji.name === '👍') {
-            message.reply('you reacted with a thumbs up.');
-        }
-        else {
-            message.reply('you reacted with a thumbs down.');
+        if (reaction.emoji.id === '727088200211759155') {
+            message.reply('Uau, Reação inesperada!.').then(m => m.delete(17000));
         }
     })
-    .catch(collected => {
-        console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-        message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-    })
-      
   }
-
 })
 
 
@@ -86,7 +77,7 @@ fs.readdir("./events/", (err, files) => {
 client.on("ready", () => {
     console.log(`Bot foi iniciado com, ${client.users.size} usuários, ${client.guilds.size} servidores, ${client.channels.size} canais.`)
 
-    let statuses = [`Minha prefix é l-ajuda!`, `Linux ON 🐧`, `Segurança e Conhecimento!`];
+    let statuses = [`Minha prefix é g-comandos`, `Linux ON 🐧`, `Segurança e Conhecimento!`];
    
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
