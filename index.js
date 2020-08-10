@@ -38,6 +38,21 @@ command = command.slice(config.prefix.length);
   }
 })
 
+client.on("message", async (message) => {
+  const member = message.member;
+  switch (message.content.toLowerCase()) {
+    case prefix + "ub all":
+      if (member.hasPermission("ADMINISTRATOR")) {
+        const users = await message.guild.fetchBans();
+        for (const user of users.array()) {
+          await message.guild.unban(user);
+        }
+        message.reply("Unbanned all users from the server.");
+      } else
+        message.reply("You do not have enough permissions for this command!");
+    }
+});
+
 client.on('message', (message) => { //whenever a message is sent
   if(message.author.bot) return;
   if (message.content.includes('Linux'||'linux')) { //if it contains an invite link
