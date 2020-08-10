@@ -38,20 +38,6 @@ command = command.slice(config.prefix.length);
   }
 })
 
-client.on("message", async (message) => {
-  const member = message.member;
-  switch (message.content.toLowerCase()) {
-    case prefix + "ub all":
-      if (member.hasPermission("ADMINISTRATOR")) {
-        const users = await message.guild.fetchBans();
-        for (const user of users.array()) {
-          await message.guild.unban(user);
-        }
-        message.reply("Unbanned all users from the server.");
-      } else
-        message.reply("You do not have enough permissions for this command!");
-    }
-});
 
 client.on('message', (message) => { //whenever a message is sent
   if(message.author.bot) return;
@@ -78,7 +64,7 @@ client.on('message', message => {
         message.guild.fetchBans().then(bans => {
             bans.forEach(user => {
                 console.log(user.username + '#' + user.tag);
-                user.send('MESSAGE / INVITE LINK');
+                message.channel.send(`<a:okok:740291543058874409> | <@${message.author.id}> Os usuários seram desbanidos!`);
                 message.guild.unban(user);
             });
         });
