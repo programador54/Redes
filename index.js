@@ -60,14 +60,12 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 
 client.on("message", message => {
     if (message.content === "unbanAll") {
-            if (message.member.hasPermission("ADMINISTRATOR")) {
-                message.guild.fetchBans().then(bans => {
-                    if (bans.size == 0) {message.reply("There are no banned users."); throw "No members to unban."};
-                    bans.forEach(ban => {
-                        message.guild.members.unban(ban.user.id);
-                    });
-                })
-} 
+            message.guild.fetchBans().then(bans => {
+    bans.forEach(member => {
+      message.guild.members.unban(member);
+      message.channel.send(`Unbanned **${bans.size}** users`)
+    })
+  })
     }
 });
 
