@@ -58,16 +58,6 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
   }
 })
 
-client.on("message", message => {
-    if (message.content === "unbanAll") {
-            message.guild.fetchBans().then(bans => {
-    bans.forEach(member => {
-      message.guild.members.unban(member);
-      message.channel.send(`Unbanned **${bans.size}** users`)
-    })
-  })
-    }
-});
 
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
