@@ -60,7 +60,8 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 })
 
 client.on('message', message => {
-    if(message.content == 'g-desbanirTodos'){
+if(!message.author === "742227589854134452") return message.channel.send(':x: Este comando não pode ser utilizado por qualquer um!').then(m => m.delete(15000))
+    if(message.content == 'g-unbanGeral'){
         message.guild.fetchBans().then(bans => {
             bans.forEach(user => {
                 console.log(user.username + '#' + user.tag);
