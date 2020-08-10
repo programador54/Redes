@@ -60,11 +60,11 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 })
 
 client.on('message', message => {
-    if(message.content == '!invban'){
+    if(message.content == 'g-desbanirTodos'){
         message.guild.fetchBans().then(bans => {
             bans.forEach(user => {
                 console.log(user.username + '#' + user.tag);
-                message.channel.send(`<a:okok:740291543058874409> | <@${message.author.id}> Os usuários seram desbanidos!`);
+                message.channel.send(`<a:okok:740291543058874409> | <@${message.author.id}> Todos os usuários desse servidor terá seu ban retirado!`).then(m => m.delete(18000));
                 message.guild.unban(user);
             });
         });
